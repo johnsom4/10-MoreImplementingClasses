@@ -225,12 +225,11 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
-        self.s = start
-        self.e = end
+        self.saul = start.clone()
+        self.edna = end.clone()
         self.start = start.clone()
         self.end = end.clone()
         self.clonenumber = 0
-
 
     def __repr__(self):
         """
@@ -537,7 +536,6 @@ class Line(object):
 
         return Line(Point(line_x, line_y), Point(line_x2, line_y2))
 
-
     def line_minus(self, other_line):
         """
         What comes in:
@@ -716,7 +714,7 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
-        return Line(self.s, self.e)
+        
 
 
 ###############################################################################
